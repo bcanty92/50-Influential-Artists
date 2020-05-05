@@ -226,10 +226,15 @@ console.log(artists[8]);
  * For example, if getArtistByIndex is invoked with the inventory and the number 0,
  * it will return `The artist at index 0 is Amedeo Modigliani`.
 */
-function getArtistByIndex(artists,id) {
+function getArtistByIndex(array,index) {
+  array.splice(index,1)
+  return array;
+}
+removeArtist(artists,8)
+console.log(artists);
 
-  return ( "The artist at index" + id + "is"+ artists.name;}
-  
+
+
   /**
 
 
@@ -241,26 +246,27 @@ function getArtistByIndex(artists,id) {
  * For example, if removeArtist is invoked with the data and the number 0,
  * it will remove Amedeo Modigliani from our dataset.
 */
-function removeArtist(name,id) {
-  name.pop();
-  id.pop();
-}
+function removeArtist(array,index) {
+  
+  
   
   /**
 
 
 /* Task 5: Create a function called lotsOfArt() that takes artists as an argument and returns an array with names of artists who painted more than 100 paintings */
 
-function lotsOfArt(name){
-  if (paintings > 100){
-    return names;
+function lotsOfArt(array){
+  let newArray = [];
+  for (let i=0 ; i< array.length; i++){
+    if (array[i].paintings >100){
+      newArray.push(array[i]);
+    }
   }
-  else if (paintings < 100){
-    return "This painting has less then 100";
-
-  }
+  return newArray;
+}
 
 
+ 
 /* Task 6: Create a function called `addArtist` that can accept an array of information and add it to the artists array. Then, Add a 21st artist to the array (you) with custom information! 👩‍🎨👨‍🎨
 
 id: 21
@@ -271,16 +277,16 @@ nationality: Your Nationality Here
 bio: Add 1-2 sentences (or use lorem ipsum) "*/
 
 function addArtist(artists){
-
-    artists.push(
+  Array.prototype.push.apply
+  (
     id: 21
     name: Brittany Canty ,
     years: 1992-05/03/2020,
     genre: Web Design, 
     nationality: Caucasian,
     bio: Born in Washinton.Loves music , art,dance and technology,
-    ); 
-
+    )
+console.log(artists);
   }
 
 
