@@ -1,3 +1,7 @@
+.percent {
+  top: 50%;
+  left: 50%;
+}
 html,
 body,
 div,
@@ -86,6 +90,25 @@ video {
   font: inherit;
   vertical-align: baseline;
 }
+nav {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: space-between;
+  font-size: 175%;
+}
+ul.navbar-nav li {
+  float: left;
+  list-style: none;
+  padding: 0px 6px;
+  border-right: 1px solid #000;
+}
+ul.navbar-nav li a {
+  text-decoration: none;
+}
+ul.navbar-nav li:last-child {
+  border-right: none;
+}
 header {
   padding: 50px 10px;
   margin: 15px;
@@ -95,22 +118,7 @@ header {
   justify-content: center;
   align-items: center;
 }
-nav {
-  text-align: center;
-}
-.title-container {
-  position: relative;
-  width: 50%;
-}
-.title-container {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-  padding: 70px;
-  border-bottom: 1px solid black;
-}
-.title-container .btn {
+.btn {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -123,20 +131,34 @@ nav {
   cursor: pointer;
   border-radius: 5px;
 }
-.artist {
-  width: 50%;
-  flex-direction: column;
-  align-items: center;
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.title-container {
+  position: relative;
+  text-align: center;
+  color: white;
+  font-size: 100px;
+}
+#skills h2 {
+  text-align: center;
+}
+.skillsCont {
+  display: flex;
+  justify-content: space-evenly;
+}
+.skillsCont div {
+  width: 25%;
+  text-align: center;
 }
 img {
-  max-width: 250%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 250;
   max-height: 25%;
   display: block;
-  align-items: center;
-}
-.artists-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  margin-bottom: 20px;
 }

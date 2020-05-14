@@ -209,7 +209,7 @@ const artists = [
 (2) Bio of the third artist in the array */
 
 console.log(artists[0].name);
-console.log(artists[2].biobio);
+console.log(artists[2].bio);
 
 
 
@@ -227,11 +227,12 @@ console.log(artists[8]);
  * it will return `The artist at index 0 is Amedeo Modigliani`.
 */
 function getArtistByIndex(array,index) {
-  array.splice(index,1)
-  return array;
-}
-removeArtist(artists,8)
-console.log(artists);
+ 
+
+  return 'The artist at index'+ index+ array[index]
+
+
+
 
 
 
@@ -247,8 +248,11 @@ console.log(artists);
  * it will remove Amedeo Modigliani from our dataset.
 */
 function removeArtist(array,index) {
-  
-  
+  array.splice(index,1)
+  return array;
+}
+  removeArtist(artists,8)
+console.log(artists);
   
   /**
 
@@ -276,18 +280,10 @@ genre: Web Design,
 nationality: Your Nationality Here
 bio: Add 1-2 sentences (or use lorem ipsum) "*/
 
-function addArtist(artists){
-  Array.prototype.push.apply
-  (
-    id: 21
-    name: Brittany Canty ,
-    years: 1992-05/03/2020,
-    genre: Web Design, 
-    nationality: Caucasian,
-    bio: Born in Washinton.Loves music , art,dance and technology,
-    )
-console.log(artists);
-  }
+function addArtist(id,name,years,genre, nationality,bio){
+  let newArray={id:id,name:name,years:years,genre:genre, nationality:nationality,bio:bio}
+ artists.push(newArray)
+}
 
 
 
